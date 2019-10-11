@@ -1,4 +1,8 @@
-mantisconnect-python
+1. Update to support mantisbt 2.x version
+2. support more features ,eg add issue etc
+
+
+mantisconnect-python2
 =======================
 
 Python client for Mantis Connect SOAP API
