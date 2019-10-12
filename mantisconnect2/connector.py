@@ -45,3 +45,14 @@ class MantisSoapConnector:
 
     def request_filter_get_issue_header(self, project_id, filter_id, page_number=0, per_page=0):
         pass
+
+    def get_projects(self):
+        pass
+
+    def get_categories(self, project):
+        pass
+
+    def create_new_issue(self, summary, project, category=None, description=None):
+       pass
+
+

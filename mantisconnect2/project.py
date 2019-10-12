@@ -2,7 +2,7 @@ from abc import ABCMeta
 from datetime import datetime
 
 
-class ExtensionFieldAbstract(metaclass=ABCMeta):
+class ExtensionFieldAbstract(ABCMeta):
     """ Abstract extension field for issue data """
     pass
 
@@ -29,7 +29,8 @@ class Issue:
         self.last_updated = datetime.now()
         self.extension_field = None
 
-    def set_extension_field(self, extension_field: ExtensionFieldAbstract):
+    # def set_extension_field(self, extension_field: ExtensionFieldAbstract):
+    def set_extension_field(self, extension_field):
         self.extension_field = extension_field
 
 
@@ -74,10 +75,10 @@ class Project:
             msg += "\n"
         return msg
 
-    def _make_issue_data_extension(self, new_issue: Issue, issue: dict):
+    def _make_issue_data_extension(self, new_issue, issue):
         raise NotImplementedError("Must implements.")
 
-    def make_issue_data(self, issue: dict):
+    def make_issue_data(self, issue):
         new_issue = Issue()
         new_issue.project = self.name
         new_issue.issue_id = issue["id"]

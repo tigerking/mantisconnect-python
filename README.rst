@@ -1,9 +1,14 @@
-1. Update to support mantisbt 2.x version
-2. support more features ,eg add issue etc
 
 
-mantisconnect-python2
+mantisconnect2
 =======================
+
+Notes
+-----------------------
+- forkeds from mantisconnect-python project(author:morenice)
+- update to support mantis 2.x (mantisconnect-python only supports 1.x)
+- support python 2.7
+- more features,eg add new issue etc
 
 Python client for Mantis Connect SOAP API
 
@@ -29,13 +34,14 @@ See sample/sample.py
 Install
 -----------------------
 Requirement
- - python > 3.5
+ - python 2.7 , 3.x
  - zeep
 
 ::
 
-    $ pip3 install mantisconnect
+    $ pip install mantisconnect2
+    
 
 
 Test version
- - mantis 1.2.11
+ - mantis 1.2.11, 2.18

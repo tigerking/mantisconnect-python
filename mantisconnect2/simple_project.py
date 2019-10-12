@@ -11,7 +11,7 @@ class SimpleProject(Project):
     def __init__(self, mantis_soap_connector, name):
         Project.__init__(self, mantis_soap_connector, name)
 
-    def _make_issue_data_extension(self, new_issue: Issue, issue: dict):
+    def _make_issue_data_extension(self, new_issue, issue):
         pass
 
     def request_filter_date_submiited_issues(self, filter_name, per_page=50):
