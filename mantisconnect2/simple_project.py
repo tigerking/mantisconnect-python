@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from mantisconnect.project import Issue
-from mantisconnect.project import Project
+from mantisconnect2.project import Issue
+from mantisconnect2.project import Project
 
 
 class SimpleProject(Project):

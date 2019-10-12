@@ -1,5 +1,5 @@
-from mantisconnect.connector_v1 import *
-from mantisconnect.connector_v2 import *
+from mantisconnect2.connector_v1 import *
+from mantisconnect2.connector_v2 import *
 from zeep import Client
 
 

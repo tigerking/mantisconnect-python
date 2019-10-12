@@ -1,7 +1,7 @@
-import mantisconnect.connector
+import mantisconnect2.connector
 
 
-class MantisSoapConnectorV1(mantisconnect.connector.MantisSoapConnector):
+class MantisSoapConnectorV1(mantisconnect2.connector.MantisSoapConnector):
     """
     Mantis soap connector v1
     """

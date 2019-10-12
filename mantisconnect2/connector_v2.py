@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import mantisconnect.connector
+import mantisconnect2.connector
 
 
-class MantisSoapConnectorV2(mantisconnect.connector.MantisSoapConnector):
+class MantisSoapConnectorV2(mantisconnect2.connector.MantisSoapConnector):
     """
     Mantis soap connector v2
     """
@@ -70,13 +70,13 @@ class MantisSoapConnectorV2(mantisconnect.connector.MantisSoapConnector):
     def _get_project_id(self, project):
         if isinstance(project, int):
             return project
-        prj = self._find_project(project_name=project)
+        prj = self.find_project(project_name=project)
         if prj:
             return prj.id
         else:
             return -1
 
-    def _find_project(self, project_name):
+    def find_project(self, project_name):
         for prj in self.client.service.mc_projects_get_user_accessible(self.user_name, self.user_passwd):
             if prj.name == project_name:
                 return prj
